@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./assets/styles/ui.css";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Home } from "./components/Home";
-import { Resume } from "./components/Resume";
 import reportWebVitals from "./reportWebVitals";
 import Logo from "./assets/img/S-CircleLogo.png";
+import { Home } from "./components/Home";
 
 // ? for optional
 interface MasterWrapperProps {}
@@ -30,41 +27,11 @@ class MasterWrapper extends React.Component<
 		return (
 			<div className="page_scroll">
 				<div className="page_container transition-flip-in-right">
-					<div className="nav">
-						<input type="checkbox" id="nav-check" />
-						<div className="nav-header">
-							<a aria-current="page" href="/">
-								<img className="nav-img" src={Logo} alt="logo image" />
-							</a>
-							<div className="nav-title">Simone Liu</div>
-						</div>
-						<div className="nav-btn">
-							<label htmlFor="nav-check">
-								<span></span>
-								<span></span>
-								<span></span>
-							</label>
-						</div>
-
-						<nav className="nav-links">
-							<a aria-current="page" href="/">
-								Home
-							</a>
-							<a aria-current="page" href="/about">
-								About
-							</a>
-							<a aria-current="page" href="/resume">
-								Resume
-							</a>
-							<a aria-current="page" href="/contact">
-								Contact
-							</a>
-						</nav>
-						<Route path="/" component={Home} exact />
-						<Route path="/about" component={About} exact />
-						<Route path="/resume" component={Resume} exact />
-						<Route path="/contact" component={Contact} exact />
+					<div className="nav-header">
+						<img className="nav-img" src={Logo} alt="logo" />
+						<div className="nav-title">Simone Liu</div>
 					</div>
+					<Home />
 				</div>
 			</div>
 		);

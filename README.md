@@ -1,7 +1,4 @@
-# Welcome to `simoneliu.net`
+# About Me
 
-### Install Dependencies
-- Run `npm i`
-
-### Execute the Project
-- Run `npm start`
+[https://simoneliu2203.github.io/about-me/
+](https://simoneliu2203.github.io/about-me/)
