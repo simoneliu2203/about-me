@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import "./assets/styles/ui.css";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Home } from "./components/Home";
 import { Resume } from "./components/Resume";
 import reportWebVitals from "./reportWebVitals";
+import Logo from "./assets/img/S-CircleLogo.png";
 
 // ? for optional
 interface MasterWrapperProps {}
@@ -27,34 +28,44 @@ class MasterWrapper extends React.Component<
 
 	render() {
 		return (
-			<div>
-				<Switch>
-					{/* If the current URL is /about, this route is rendered
-              while the rest are ignored */}
-					<Route path="/about">
-						<About />
-					</Route>
+			<div className="page_scroll">
+				<div className="page_container transition-flip-in-right">
+					<div className="nav">
+						<input type="checkbox" id="nav-check" />
+						<div className="nav-header">
+							<a aria-current="page" href="/">
+								<img className="nav-img" src={Logo} alt="logo image" />
+							</a>
+							<div className="nav-title">Simone Liu</div>
+						</div>
+						<div className="nav-btn">
+							<label htmlFor="nav-check">
+								<span></span>
+								<span></span>
+								<span></span>
+							</label>
+						</div>
 
-					{/* Note how these two routes are ordered. The more specific
-              path="/contact/:id" comes before path="/contact" so that
-              route will render when viewing an individual contact */}
-					<Route path="/contact/:id">
-						<Contact />
-					</Route>
-					<Route path="/contact">
-						<Contact />
-					</Route>
-
-					{/* If none of the previous routes render anything,
-              this route acts as a fallback.
-  
-              Important: A route with path="/" will *always* match
-              the URL because all URLs begin with a /. So that's
-              why we put this one last of all */}
-					<Route path="/">
-						<Home />
-					</Route>
-				</Switch>
+						<nav className="nav-links">
+							<a aria-current="page" href="/">
+								Home
+							</a>
+							<a aria-current="page" href="/about">
+								About
+							</a>
+							<a aria-current="page" href="/resume">
+								Resume
+							</a>
+							<a aria-current="page" href="/contact">
+								Contact
+							</a>
+						</nav>
+						<Route path="/" component={Home} exact />
+						<Route path="/about" component={About} exact />
+						<Route path="/resume" component={Resume} exact />
+						<Route path="/contact" component={Contact} exact />
+					</div>
+				</div>
 			</div>
 		);
 	}
@@ -71,3 +82,7 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+/**
+ *
+ */

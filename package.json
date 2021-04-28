@@ -1,4 +1,5 @@
 {
+	"homepage": "http://simoneliu2203.github.io/about-me",
 	"name": "simoneliu-net",
 	"version": "0.1.0",
 	"private": true,
@@ -10,21 +11,26 @@
 		"@types/node": "^14.14.41",
 		"@types/react-dom": "^17.0.3",
 		"@types/react-router-dom": "^5.1.7",
+		"file-loader": "^6.1.1",
 		"npx": "^10.2.2",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.3",
 		"sass": "^1.32.11",
+		"sass-loader": "^10.1.1",
+		"style-loader": "^1.3.0",
 		"web-vitals": "^1.1.1"
 	},
 	"scripts": {
 		"start": "npm run sass && react-scripts start",
-		"build": "react-scripts build",
+		"build": "npm run sass && react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"sass": "npx sass src/styles/input.scss src/assets/styles/ui.css",
-		"sassWatch": "sass --watch src/styles/input.scss src/assets/styles/ui.css"
+		"sassWatch": "sass --watch src/styles/input.scss src/assets/styles/ui.css",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -46,7 +52,7 @@
 	},
 	"devDependencies": {
 		"css-loader": "^4.3.0",
-		"ts-loader": "^9.1.1",
-		"typescript": "^4.2.4"
+		"gh-pages": "^3.1.0",
+		"ts-loader": "^9.1.1"
 	}
 }
