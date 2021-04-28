@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/simoneliu-net/static/css/main.9d74dd02.chunk.css",
+    "main.js": "/simoneliu-net/static/js/main.96d9b25d.chunk.js",
+    "main.js.map": "/simoneliu-net/static/js/main.96d9b25d.chunk.js.map",
+    "runtime-main.js": "/simoneliu-net/static/js/runtime-main.03a9cde8.js",
+    "runtime-main.js.map": "/simoneliu-net/static/js/runtime-main.03a9cde8.js.map",
+    "static/js/2.f2ce425a.chunk.js": "/simoneliu-net/static/js/2.f2ce425a.chunk.js",
+    "static/js/2.f2ce425a.chunk.js.map": "/simoneliu-net/static/js/2.f2ce425a.chunk.js.map",
+    "static/js/3.4c8b2936.chunk.js": "/simoneliu-net/static/js/3.4c8b2936.chunk.js",
+    "static/js/3.4c8b2936.chunk.js.map": "/simoneliu-net/static/js/3.4c8b2936.chunk.js.map",
+    "index.html": "/simoneliu-net/index.html",
+    "static/css/main.9d74dd02.chunk.css.map": "/simoneliu-net/static/css/main.9d74dd02.chunk.css.map",
+    "static/js/2.f2ce425a.chunk.js.LICENSE.txt": "/simoneliu-net/static/js/2.f2ce425a.chunk.js.LICENSE.txt",
+    "static/media/S-CircleLogo.a3dbf9a6.png": "/simoneliu-net/static/media/S-CircleLogo.a3dbf9a6.png",
+    "static/media/ui.css": "/simoneliu-net/static/media/main_bg.51073848.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03a9cde8.js",
+    "static/js/2.f2ce425a.chunk.js",
+    "static/css/main.9d74dd02.chunk.css",
+    "static/js/main.96d9b25d.chunk.js"
+  ]
+}
